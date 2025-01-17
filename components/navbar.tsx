@@ -80,8 +80,8 @@ export function Navbar() {
                         <SheetTitle>
                             <Link href="/" className="ml-4 flex items-center gap-2">
                                 {/* <Image
-                                    src="/Partner-Logo_BizCredify.png"
-                                    alt="BizCredify Logo"
+                                    src="/Softbro-D.png"
+                                    alt="softbro-D"
                                     width={100}
                                     height={100}
                                     className="h-auto w-auto"
