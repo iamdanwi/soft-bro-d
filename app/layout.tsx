@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Serif_Text, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/navbar";
+import Footer from "@/components/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSerifText = DM_Serif_Text({
+  variable: "--font-dm-serif-text",
   subsets: ["latin"],
+  weight: "400"
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-dm-serif-display",
   subsets: ["latin"],
+  weight: "400"
 });
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${dmSerifText.variable} ${dmSerifDisplay.variable} antialiased container mx-auto bg-[#f4efe69f] text-[#55534f] `}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
